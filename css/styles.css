@@ -368,6 +368,7 @@ section {
   flex-shrink: 0;
 }
 
+/*Modificación del tamaño del logo*/
 .brand-logo {
   width: 76px;
   height: 76px;
