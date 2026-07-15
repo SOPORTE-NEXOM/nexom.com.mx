@@ -2388,15 +2388,21 @@ textarea.form-control {
 }
 
 .newsletter-form button {
-  display: grid;
-  width: 48px;
+  display: inline-flex;
+  min-height: 44px;
   margin: 4px;
-  flex: 0 0 48px;
-  place-items: center;
+  padding: 0 18px;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
   border: 0;
-  border-radius: 50%;
+  border-radius: 999px;
   background: var(--color-primary);
   color: var(--color-white);
+  font-size: 0.8rem;
+  font-weight: 700;
+  white-space: nowrap;
   transition:
     background-color var(--transition),
     transform var(--transition);
@@ -2998,6 +3004,22 @@ textarea.form-control {
 
   .footer-newsletter {
     grid-column: auto;
+  }
+
+  .newsletter-form {
+    align-items: stretch;
+    flex-direction: column;
+    padding: 5px;
+    border-radius: 18px;
+  }
+
+  .newsletter-form input {
+    min-height: 48px;
+  }
+
+  .newsletter-form button {
+    width: 100%;
+    margin: 0;
   }
 
   .footer-bottom-inner {
