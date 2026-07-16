@@ -481,6 +481,12 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
 
     event.preventDefault();
 
+    if (target instanceof HTMLDialogElement) {
+      target.showModal();
+      document.body.classList.add("legal-dialog-open");
+      return;
+    }
+
     const headerOffset = siteHeader.offsetHeight + 12;
     const targetPosition =
       target.getBoundingClientRect().top +
@@ -493,5 +499,25 @@ document.querySelectorAll('a[href^="#"]').forEach((link) => {
     });
 
     history.replaceState(null, "", targetId);
+  });
+});
+
+/* =========================================================
+   15. VENTANAS DE AVISO DE PRIVACIDAD Y TÉRMINOS DE USO
+========================================================== */
+const legalDialogs = document.querySelectorAll(".legal-dialog");
+
+legalDialogs.forEach((dialog) => {
+  const closeButton = dialog.querySelector(".legal-dialog-close");
+
+  closeButton.addEventListener("click", () => dialog.close());
+
+  dialog.addEventListener("click", (event) => {
+    if (event.target === dialog) dialog.close();
+  });
+
+  dialog.addEventListener("close", () => {
+    const hasOpenDialog = [...legalDialogs].some((item) => item.open);
+    document.body.classList.toggle("legal-dialog-open", hasOpenDialog);
   });
 });

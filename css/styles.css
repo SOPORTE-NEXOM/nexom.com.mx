@@ -3034,6 +3034,107 @@ textarea.form-control {
   }
 }
 
+/* =========================================================
+   VENTANAS LEGALES
+========================================================= */
+.legal-dialog {
+  width: min(1040px, calc(100% - 32px));
+  max-width: none;
+  max-height: calc(100dvh - 32px);
+  margin: auto;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: var(--radius-lg);
+  background: transparent;
+  color: var(--color-text);
+  box-shadow: var(--shadow-lg);
+}
+
+.legal-dialog::backdrop {
+  background: rgba(3, 12, 30, 0.76);
+  backdrop-filter: blur(6px);
+}
+
+.legal-dialog-panel {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: inherit;
+  background: var(--color-surface);
+}
+
+.legal-dialog-content {
+  max-height: calc(100dvh - 34px);
+  padding: 64px 24px 48px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+}
+
+.legal-dialog-close {
+  position: absolute;
+  z-index: 2;
+  top: 16px;
+  right: 18px;
+  display: grid;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  place-items: center;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  background: var(--color-surface);
+  color: var(--color-heading);
+  font: inherit;
+  font-size: 30px;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition:
+    color var(--transition),
+    border-color var(--transition),
+    transform var(--transition);
+}
+
+.legal-dialog-close:hover,
+.legal-dialog-close:focus-visible {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  transform: rotate(4deg);
+}
+
+.legal-dialog h3 {
+  margin-top: 34px;
+  color: var(--color-heading);
+}
+
+.legal-dialog li + li {
+  margin-top: 8px;
+}
+
+body.legal-dialog-open {
+  overflow: hidden;
+}
+
+@media (max-width: 640px) {
+  .legal-dialog {
+    width: calc(100% - 16px);
+    max-height: calc(100dvh - 16px);
+    border-radius: var(--radius-md);
+  }
+
+  .legal-dialog-content {
+    max-height: calc(100dvh - 18px);
+    padding: 70px 6px 36px;
+  }
+
+  .legal-dialog-close {
+    top: 12px;
+    right: 12px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
