@@ -638,6 +638,15 @@ body.dark-theme .theme-toggle .moon-icon {
   max-width: 760px;
 }
 
+.hero-logo {
+  display: block;
+  width: clamp(190px, 24vw, 320px);
+  height: auto;
+  margin: 0 0 28px;
+  object-fit: contain;
+  object-position: left center;
+}
+
 .hero-eyebrow {
   display: inline-flex;
   align-items: center;
