@@ -638,15 +638,6 @@ body.dark-theme .theme-toggle .moon-icon {
   max-width: 760px;
 }
 
-.hero-logo {
-  display: block;
-  width: clamp(190px, 24vw, 320px);
-  height: auto;
-  margin: 0 0 28px;
-  object-fit: contain;
-  object-position: left center;
-}
-
 .hero-eyebrow {
   display: inline-flex;
   align-items: center;
@@ -674,6 +665,9 @@ body.dark-theme .theme-toggle .moon-icon {
 }
 
 .hero h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   max-width: 860px;
   margin-bottom: 26px;
   color: var(--color-white);
@@ -682,8 +676,68 @@ body.dark-theme .theme-toggle .moon-icon {
   letter-spacing: -0.065em;
 }
 
-.hero h1 span {
-  display: inline;
+.hero-brand-lockup {
+  position: relative;
+  left: min(calc(50vw - 20px), 590px);
+  display: grid;
+  width: clamp(340px, 72vw, 650px);
+  max-width: calc(100vw - 40px);
+  grid-template-columns: 16% minmax(0, 1fr);
+  grid-template-areas:
+    "symbol wordmark"
+    ". title";
+  align-items: center;
+  column-gap: clamp(12px, 1.5vw, 22px);
+  row-gap: clamp(12px, 1.4vw, 18px);
+  transform: translateX(-50%);
+}
+
+.hero-brand-symbol,
+.hero-wordmark {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.hero-brand-symbol {
+  grid-area: symbol;
+  aspect-ratio: 1;
+}
+
+.hero-brand-symbol img {
+  position: absolute;
+  top: -31.7%;
+  left: -73.9%;
+  width: 249.8%;
+  max-width: none;
+  height: auto;
+  filter: brightness(0) invert(1);
+}
+
+.hero-wordmark {
+  grid-area: wordmark;
+  width: 100%;
+  aspect-ratio: 5.05 / 1;
+}
+
+.hero-wordmark img {
+  position: absolute;
+  top: -386%;
+  left: -17.1%;
+  width: 134.7%;
+  max-width: none;
+  height: auto;
+  filter: brightness(0) invert(1);
+}
+
+.hero-title-line {
+  grid-area: title;
+  justify-self: center;
+  display: block;
+  width: max-content;
+  max-width: min(760px, calc(100vw - 30px));
+  margin-top: 4px;
+  text-align: center;
   background: linear-gradient(
     100deg,
     #ffffff 15%,
@@ -2319,12 +2373,15 @@ textarea.form-control {
 }
 
 .footer-brand .brand {
+  display: block;
+  width: min(100%, 320px);
   margin-bottom: 24px;
 }
 
 .footer-brand .brand-logo {
-  width: 160px;
-  height: 160px;
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .footer-brand p {
@@ -2721,6 +2778,15 @@ textarea.form-control {
     max-width: 780px;
   }
 
+  .hero-brand-lockup {
+    width: min(650px, calc(100vw - 40px));
+  }
+
+  .hero-title-line {
+    max-width: calc(100vw - 64px);
+    font-size: clamp(3rem, 7vw, 4.25rem);
+  }
+
   .hero-card {
     width: min(100%, 480px);
     max-width: none;
@@ -2844,6 +2910,21 @@ textarea.form-control {
 
   .hero h1 {
     font-size: clamp(2.75rem, 13vw, 4.2rem);
+  }
+
+  .hero-brand-lockup {
+    left: calc(50vw - 15px);
+    width: 100%;
+    max-width: calc(100vw - 30px);
+    grid-template-columns: 14% minmax(0, 1fr);
+    column-gap: 9px;
+    row-gap: 12px;
+  }
+
+  .hero-title-line {
+    max-width: calc(100vw - 52px);
+    font-size: clamp(2.15rem, 10.5vw, 3.25rem);
+    line-height: 1.08;
   }
 
   .hero-description {
