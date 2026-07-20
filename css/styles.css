@@ -737,7 +737,9 @@ body.dark-theme .theme-toggle .moon-icon {
   width: max-content;
   max-width: min(760px, calc(100vw - 30px));
   margin-top: 4px;
+  font-size: clamp(2.5rem, 4vw, 3.6rem);
   text-align: center;
+  white-space: nowrap;
   background: linear-gradient(
     100deg,
     #ffffff 15%,
@@ -2923,7 +2925,7 @@ textarea.form-control {
 
   .hero-title-line {
     max-width: calc(100vw - 52px);
-    font-size: clamp(2.15rem, 10.5vw, 3.25rem);
+    font-size: clamp(1.2rem, 6vw, 2.25rem);
     line-height: 1.08;
   }
 
