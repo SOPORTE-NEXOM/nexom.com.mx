@@ -261,6 +261,7 @@
 .nexom-chatbot-message-bubble p {
     margin: 0;
     color: inherit;
+    white-space: pre-line;
 }
 
 .nexom-chatbot-message-bubble p + p {

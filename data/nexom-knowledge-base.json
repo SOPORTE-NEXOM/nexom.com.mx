@@ -1,0 +1,198 @@
+{
+  "metadata": {
+    "organization": "NEXOM",
+    "language": "es-MX",
+    "sourcePolicy": "official_website_only",
+    "fallbackMessage": "Por el momento no dispongo de esa información exacta, pero puedes dejarnos tus datos para que un asesor te contacte."
+  },
+  "contact": {
+    "phone": {
+      "value": "477 154 5195",
+      "status": "verified",
+      "label": "Teléfono de contacto",
+      "isWhatsapp": false,
+      "whatsappConfirmed": false
+    },
+    "email": {
+      "value": "alejandro.montes@nexom.com.mx",
+      "status": "verified",
+      "label": "Correo electrónico"
+    },
+    "address": {
+      "value": "Villas de Los Sauces 140A, Real del Bosque, 37178 León de los Aldama, Gto., México",
+      "status": "verified",
+      "label": "Dirección publicada"
+    },
+    "city": {
+      "value": "León de los Aldama",
+      "status": "verified"
+    },
+    "state": {
+      "value": "Guanajuato",
+      "status": "verified"
+    },
+    "country": {
+      "value": "México",
+      "status": "verified"
+    },
+    "coverage": {
+      "value": null,
+      "status": "not_published"
+    },
+    "salesEmail": {
+      "value": null,
+      "status": "not_published"
+    },
+    "supportEmail": {
+      "value": null,
+      "status": "not_published"
+    },
+    "whatsapp": {
+      "value": null,
+      "status": "not_published"
+    },
+    "businessHours": {
+      "value": null,
+      "status": "not_published"
+    }
+  },
+  "company": {
+    "name": "NEXOM",
+    "targetMarket": [
+      "Pequeñas empresas",
+      "Medianas empresas",
+      "Pymes"
+    ],
+    "description": "NEXOM ayuda a pequeñas y medianas empresas a mejorar sus procesos mediante automatización estratégica, inteligencia artificial, capacitación y consultoría.",
+    "valueProposition": [
+      "Ahorro de tiempo",
+      "Reducción de errores",
+      "Procesos más eficientes",
+      "Implementación de inteligencia artificial",
+      "Capacitación de equipos",
+      "Acompañamiento tecnológico"
+    ]
+  },
+  "services": [
+    {
+      "id": "automation",
+      "name": "Automatización",
+      "keywords": [
+        "automatizacion",
+        "automatizar",
+        "procesos",
+        "flujo",
+        "flujos",
+        "tareas repetitivas"
+      ],
+      "description": "Diseño de procesos inteligentes orientados a ahorrar tiempo y reducir errores.",
+      "benefits": [
+        "Ahorro de tiempo",
+        "Reducción de errores",
+        "Mayor eficiencia",
+        "Optimización de procesos"
+      ]
+    },
+    {
+      "id": "training",
+      "name": "Capacitación",
+      "keywords": [
+        "capacitacion",
+        "capacitar",
+        "curso",
+        "cursos",
+        "formacion",
+        "entrenamiento"
+      ],
+      "description": "Formación de equipos para utilizar herramientas digitales y de inteligencia artificial con mayor confianza.",
+      "benefits": [
+        "Preparación del equipo",
+        "Adopción práctica de tecnología",
+        "Mayor confianza en el uso de herramientas",
+        "Mejor aprovechamiento de soluciones digitales"
+      ]
+    },
+    {
+      "id": "consulting",
+      "name": "Consultoría",
+      "keywords": [
+        "consultoria",
+        "asesoria",
+        "asesoramiento",
+        "diagnostico",
+        "integrar tecnologia"
+      ],
+      "description": "Asesoría para integrar tecnología y estructurar procesos claros y eficientes.",
+      "benefits": [
+        "Orientación tecnológica",
+        "Estructuración de procesos",
+        "Mejora de eficiencia",
+        "Acompañamiento en adopción de inteligencia artificial"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "local-store",
+      "name": "Tienda local",
+      "sector": "Comercio minorista",
+      "keywords": [
+        "tienda",
+        "inventario",
+        "ventas"
+      ],
+      "scope": [
+        "Automatización de inventarios",
+        "Automatización de ventas en tiempo real"
+      ]
+    },
+    {
+      "id": "consulting-case",
+      "name": "Consultoría",
+      "sector": "Consultoría",
+      "keywords": [
+        "consultoria",
+        "procesos",
+        "eficiencia"
+      ],
+      "scope": [
+        "Estructuración de procesos para mejorar la eficiencia"
+      ]
+    },
+    {
+      "id": "training-case",
+      "name": "Capacitación",
+      "sector": "Formación empresarial",
+      "keywords": [
+        "capacitacion",
+        "equipos",
+        "inteligencia artificial"
+      ],
+      "scope": [
+        "Formación de equipos para usar inteligencia artificial en sus tareas"
+      ]
+    },
+    {
+      "id": "logistics-case",
+      "name": "Logística",
+      "sector": "Logística",
+      "keywords": [
+        "logistica",
+        "rutas",
+        "entregas"
+      ],
+      "scope": [
+        "Optimización de rutas",
+        "Entregas automatizadas"
+      ]
+    }
+  ],
+  "responseRules": {
+    "unknownDataResponse": "Por el momento no dispongo de esa información exacta, pero puedes dejarnos tus datos para que un asesor te contacte.",
+    "neverInvent": true,
+    "neverInferWhatsapp": true,
+    "neverInferCoverage": true,
+    "neverGeneratePrices": true,
+    "neverGenerateMetrics": true
+  }
+}
