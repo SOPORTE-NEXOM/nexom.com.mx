@@ -635,7 +635,9 @@ body.dark-theme .theme-toggle .moon-icon {
 }
 
 .hero-content {
+  width: 100%;
   max-width: 760px;
+  align-self: start;
 }
 
 .hero-eyebrow {
@@ -680,7 +682,7 @@ body.dark-theme .theme-toggle .moon-icon {
   position: relative;
   left: min(calc(50vw - 20px), 590px);
   display: grid;
-  width: clamp(340px, 72vw, 650px);
+  width: clamp(340px, 68vw, 600px);
   max-width: calc(100vw - 40px);
   grid-template-columns: 16% minmax(0, 1fr);
   grid-template-areas:
@@ -737,7 +739,7 @@ body.dark-theme .theme-toggle .moon-icon {
   width: max-content;
   max-width: min(760px, calc(100vw - 30px));
   margin-top: 4px;
-  font-size: clamp(2.5rem, 4vw, 3.6rem);
+  font-size: clamp(2.25rem, 3.5vw, 3.2rem);
   text-align: center;
   white-space: nowrap;
   background: linear-gradient(
@@ -796,8 +798,10 @@ body.dark-theme .theme-toggle .moon-icon {
 
 .hero-card {
   position: relative;
-  max-width: 400px;
+  align-self: start;
+  max-width: 360px;
   justify-self: end;
+  margin-top: clamp(300px, 24vw, 330px);
   padding: 30px;
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: var(--radius-lg);
@@ -2781,18 +2785,19 @@ textarea.form-control {
   }
 
   .hero-brand-lockup {
-    width: min(650px, calc(100vw - 40px));
+    width: min(600px, calc(100vw - 40px));
   }
 
   .hero-title-line {
     max-width: calc(100vw - 64px);
-    font-size: clamp(3rem, 7vw, 4.25rem);
+    font-size: clamp(2.5rem, 5.5vw, 3.4rem);
   }
 
   .hero-card {
     width: min(100%, 480px);
     max-width: none;
     justify-self: start;
+    margin-top: 18px;
   }
 
   .hero-scroll {

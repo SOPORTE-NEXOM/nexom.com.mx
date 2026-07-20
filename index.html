@@ -67,6 +67,8 @@
 
   <link rel="stylesheet" href="css/styles.css">
 
+  <link rel="stylesheet" href="css/nexom-chatbot.css">
+
 </head>
 
 <body>
@@ -1677,6 +1679,143 @@
   </button>
 
   <script src="js/main.js"></script>
+
+  <!-- =====================================================
+       CHATBOT BÁSICO DE NEXOM
+       Colocado antes de la etiqueta de cierre </body>
+  ====================================================== -->
+
+  <div
+    id="nexom-chatbot-container"
+    class="nexom-chatbot-container"
+  >
+    <!-- Ventana del chatbot -->
+    <section
+      id="nexom-chatbot-window"
+      class="nexom-chatbot-window"
+      aria-label="Chatbot de NEXOM"
+      aria-hidden="true"
+    >
+      <!-- Encabezado -->
+      <header class="nexom-chatbot-header">
+        <div class="nexom-chatbot-header-info">
+          <span
+            class="nexom-chatbot-avatar"
+            aria-hidden="true"
+          >
+            🤖
+          </span>
+
+          <div>
+            <h2 class="nexom-chatbot-title">
+              Chat NEXOM
+            </h2>
+
+            <p class="nexom-chatbot-status">
+              Asistente automático
+            </p>
+          </div>
+        </div>
+
+        <button
+          id="nexom-chatbot-close"
+          class="nexom-chatbot-close"
+          type="button"
+          aria-label="Cerrar chatbot"
+        >
+          ×
+        </button>
+      </header>
+
+      <!-- Área donde aparecerán los mensajes -->
+      <div
+        id="nexom-chatbot-messages"
+        class="nexom-chatbot-messages"
+        aria-live="polite"
+      >
+        <!-- Mensaje inicial del chatbot -->
+        <div class="nexom-chatbot-message nexom-chatbot-message-bot">
+          <div class="nexom-chatbot-message-avatar">
+            🤖
+          </div>
+
+          <div class="nexom-chatbot-message-bubble">
+            <p>
+              <p>
+    ¡Hola! Bienvenido al sitio web de NEXOM.
+</p>
+            </p>
+
+            <p>
+              Puedes preguntarme por nuestros servicios,
+              automatización, inteligencia artificial,
+              contacto o cotizaciones.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Formulario para escribir mensajes -->
+      <form
+        id="nexom-chatbot-form"
+        class="nexom-chatbot-form"
+        autocomplete="off"
+      >
+        <label
+          for="nexom-chatbot-input"
+          class="nexom-chatbot-hidden-label"
+        >
+          Escribe tu mensaje
+        </label>
+
+        <input
+          id="nexom-chatbot-input"
+          class="nexom-chatbot-input"
+          type="text"
+          placeholder="Escribe tu mensaje..."
+          maxlength="300"
+          required
+        >
+
+        <button
+          id="nexom-chatbot-send"
+          class="nexom-chatbot-send"
+          type="submit"
+          aria-label="Enviar mensaje"
+        >
+          ➤
+        </button>
+      </form>
+    </section>
+
+    <!-- Botón flotante para abrir el chatbot -->
+    <button
+      id="nexom-chatbot-button"
+      class="nexom-chatbot-button"
+      type="button"
+      aria-label="Abrir chatbot de NEXOM"
+      aria-expanded="false"
+    >
+      <span
+        id="nexom-chatbot-open-icon"
+        class="nexom-chatbot-button-icon"
+        aria-hidden="true"
+      >
+        🤖
+      </span>
+
+      <span
+        id="nexom-chatbot-close-icon"
+        class="nexom-chatbot-button-icon nexom-chatbot-button-icon-close"
+        aria-hidden="true"
+      >
+        ×
+      </span>
+    </button>
+  </div>
+
+  <!-- Archivo JavaScript del chatbot -->
+  <script src="js/js/nexom-chatbot.js"></script>
 
 </body>
 
