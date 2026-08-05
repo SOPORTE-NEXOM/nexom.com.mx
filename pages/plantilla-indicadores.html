@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Plantilla de indicadores de automatización | NEXOM</title>
+  <meta name="description" content="Plantilla práctica para definir la línea base y medir resultados de un proyecto de automatización.">
+  <link rel="stylesheet" href="../css/resources.css">
+</head>
+<body>
+<header class="topbar"><div class="container topbar-inner"><a class="brand" href="../index.html"><img class="brand-logo" src="../images/logo_nexom_sinfondo.png" alt="NEXOM"></a><a class="back" href="../index.html#recursos">← Volver a Recursos</a></div></header>
+<section class="resource-hero"><div class="container"><span class="eyebrow">Plantilla · Indicadores</span><h1>Qué medir antes de automatizar</h1><p>Documenta la situación actual, define el resultado esperado y evita atribuir mejoras sin evidencia.</p></div></section>
+<main class="resource-main"><div class="container">
+  <aside class="lead-card"><strong>Cómo usar esta plantilla</strong><p>Complétala con la persona responsable del proceso. Después imprímela o guárdala como PDF desde el navegador para revisarla con el equipo.</p></aside>
+  <form class="worksheet" onsubmit="return false">
+    <h2>1. Identificación del proceso</h2><div class="field-grid"><div class="field"><label for="proceso">Nombre del proceso</label><input id="proceso" placeholder="Ej. Elaboración de reporte semanal"></div><div class="field"><label for="responsable">Responsable</label><input id="responsable" placeholder="Área o persona"></div><div class="field"><label for="inicio">Evento de inicio</label><input id="inicio" placeholder="¿Qué activa el proceso?"></div><div class="field"><label for="fin">Resultado final</label><input id="fin" placeholder="¿Qué debe entregarse?"></div><div class="field full"><label for="alcance">Alcance y exclusiones</label><textarea id="alcance" placeholder="Qué incluye y qué queda fuera de esta medición"></textarea></div></div>
+    <h2>2. Línea base</h2><div class="table-wrap"><table><thead><tr><th>Indicador</th><th>Situación actual</th><th>Meta</th><th>Fuente</th></tr></thead><tbody><tr><td>Volumen por periodo</td><td contenteditable="true">Completar</td><td contenteditable="true">Completar</td><td contenteditable="true">Sistema o registro</td></tr><tr><td>Tiempo por caso</td><td contenteditable="true">Completar</td><td contenteditable="true">Completar</td><td contenteditable="true">Muestra cronometrada</td></tr><tr><td>Tiempo total de respuesta</td><td contenteditable="true">Completar</td><td contenteditable="true">Completar</td><td contenteditable="true">Fecha de entrada y salida</td></tr><tr><td>Tasa de error</td><td contenteditable="true">Completar</td><td contenteditable="true">Completar</td><td contenteditable="true">Incidencias / total</td></tr><tr><td>Retrabajo</td><td contenteditable="true">Completar</td><td contenteditable="true">Completar</td><td contenteditable="true">Casos corregidos</td></tr><tr><td>Adopción del equipo</td><td contenteditable="true">Completar</td><td contenteditable="true">Completar</td><td contenteditable="true">Usuarios activos / objetivo</td></tr></tbody></table></div>
+    <h2>3. Calidad y control</h2><div class="field-grid"><div class="field"><label for="calidad">Criterio de calidad</label><textarea id="calidad" placeholder="Cómo se determina que el resultado es correcto"></textarea></div><div class="field"><label for="excepciones">Excepciones conocidas</label><textarea id="excepciones" placeholder="Casos que requieren tratamiento distinto"></textarea></div><div class="field"><label for="riesgos">Riesgos principales</label><textarea id="riesgos" placeholder="Operativos, legales, de datos o adopción"></textarea></div><div class="field"><label for="supervision">Supervisión humana</label><textarea id="supervision" placeholder="Qué decisiones requieren revisión o aprobación"></textarea></div></div>
+    <h2>4. Plan de medición</h2><div class="field-grid"><div class="field"><label for="periodo">Periodo de comparación</label><input id="periodo" placeholder="Ej. 4 semanas antes y 4 después"></div><div class="field"><label for="frecuencia">Frecuencia de revisión</label><select id="frecuencia"><option>Semanal</option><option>Quincenal</option><option>Mensual</option><option>Por cada ejecución</option></select></div><div class="field full"><label for="decision">Criterio para continuar, ajustar o detener</label><textarea id="decision" placeholder="Define la condición de éxito y los límites aceptables"></textarea></div></div>
+    <div class="callout"><strong>Importante</strong><p>No uses porcentajes aislados. Conserva la fuente, el periodo, el tamaño de muestra y la definición exacta de cada indicador.</p></div>
+    <div class="actions"><button class="btn" type="button" onclick="window.print()">Imprimir o guardar en PDF</button><button class="btn secondary" type="reset">Limpiar plantilla</button></div>
+  </form>
+</div></main>
+<footer class="resource-footer"><div class="container">© NEXOM · <a href="../index.html">Inteligencia aplicada a la operación</a></div></footer>
+</body>
+</html>
