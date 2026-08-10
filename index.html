@@ -72,11 +72,11 @@
     @media(prefers-reduced-motion:reduce){.sparkline-line,.chart-line{stroke-dashoffset:0}.sparkline-area,.chart-area{opacity:.3;transform:none}.sparkline-mid,.sparkline-end,.chart-mid,.chart-end{opacity:1;transform:none}.sparkline-halo,.chart-halo{opacity:.25;transform:none}.chart-dot{opacity:1}.clock-hands,.benefit-shield svg,.benefit-shield:after,.shield-check,.outcomes .benefit-sparkline *,.performance-card.is-animated .chart-line,.performance-card.is-animated .chart-area,.performance-card.is-animated .chart-mid,.performance-card.is-animated .chart-end,.performance-card.is-animated .chart-halo{animation:none}.clock-hands,.benefit-shield svg{transform:none}.benefit-shield:after{opacity:0}.shield-check{opacity:1}}
     .nav a,.btn{font-weight:300}
     /* Ampliación del mapa principal orientada a facilitar su lectura. */
-    .map-zoom-trigger{position:relative;display:block;width:100%;padding:0;border-radius:28px;background:transparent;color:#fff;cursor:zoom-in}
-    .map-zoom-trigger .hero-visual{transition:transform .35s cubic-bezier(.22,1,.36,1),box-shadow .35s ease}
+    .map-zoom-trigger{position:relative;display:block;width:fit-content;max-width:100%;margin-inline:auto;padding:0;border-radius:28px;background:transparent;color:#fff;cursor:zoom-in}
+    .map-zoom-trigger .hero-visual{width:auto;max-width:100%;max-height:413px;margin-inline:auto;transition:transform .35s cubic-bezier(.22,1,.36,1),box-shadow .35s ease}
     .map-zoom-trigger:hover .hero-visual,.map-zoom-trigger:focus-visible .hero-visual{transform:scale(1.015);box-shadow:0 38px 90px rgba(0,0,0,.42),0 0 28px rgba(31,182,178,.12)}
     .map-zoom-trigger:focus-visible{outline:3px solid var(--cyan2);outline-offset:5px}
-    .map-zoom-label{position:absolute;right:16px;bottom:16px;display:inline-flex;align-items:center;gap:8px;padding:9px 13px;border:1px solid rgba(255,255,255,.24);border-radius:999px;background:rgba(7,20,41,.86);box-shadow:0 8px 24px rgba(0,0,0,.28);font-size:.72rem;line-height:1;backdrop-filter:blur(8px)}
+    .map-zoom-label{position:static;display:flex;width:max-content;max-width:100%;align-items:center;gap:8px;margin:10px 0 0 auto;padding:9px 13px;border:1px solid rgba(255,255,255,.24);border-radius:999px;background:rgba(7,20,41,.86);box-shadow:0 8px 24px rgba(0,0,0,.28);font-size:.72rem;line-height:1;backdrop-filter:blur(8px)}
     .map-zoom-label svg{width:17px;height:17px}
     .map-lightbox{width:calc(100vw - 24px);max-width:none;height:calc(100vh - 24px);max-height:none;margin:auto;padding:0;border:1px solid rgba(114,221,216,.3);border-radius:20px;background:#071429;color:#fff;overflow:hidden;box-shadow:0 30px 100px rgba(0,0,0,.65)}
     .map-lightbox::backdrop{background:rgba(3,10,22,.86);backdrop-filter:blur(7px)}
@@ -98,7 +98,7 @@
   <div class="container nav-wrap">
     <a class="brand" href="#inicio" aria-label="NEXOM, inicio"><img class="brand-logo" src="images/logo_nexom_hd_transparente_v2.png" alt="NEXOM — Soluciones de valor estratégico que escalan su visión"></a>
     <nav class="nav" id="nav" aria-label="Navegación principal">
-      <a href="#inicio">Inicio</a><a href="#soluciones">Soluciones</a><a href="#metodologia">Metodología</a><a href="#sectores">Sectores</a><a href="#casos">Casos</a><a href="#recursos">Recursos</a><a href="#nosotros">Nosotros</a>
+      <a href="#inicio">Inicio</a><a href="#soluciones">Soluciones</a><a href="#metodologia">Metodología</a><a href="#sectores">Sectores</a><a href="#casos">Casos</a><a href="#recursos">Recursos</a><a href="#contacto">Contáctanos</a>
     </nav>
     <div class="nav-actions"><a class="btn btn-primary" href="#contacto">Solicitar diagnóstico</a><button class="menu-btn" id="menuBtn" aria-label="Abrir menú"><svg viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div>
   </div>
@@ -169,7 +169,7 @@
   <ul>
     <li>Correo: alejandro.montes@nexom.com.mx</li>
     <li>Teléfono:+52 4771545195</li>
-    <li><a class="linkedin-profile-link" href="https://goo.su/COZ7NF" target="_blank" rel="noopener noreferrer"><strong>LinkedIn</strong><span>Abrir perfil →</span></a></li>
+    <li><a class="linkedin-profile-link" href="https://goo.su/COZ7NF" target="_blank" rel="noopener noreferrer"><strong>LinkedIn</strong><span>Visitar →</span></a></li>
   </ul>
 
   <div class="linkedin-qr-box">
