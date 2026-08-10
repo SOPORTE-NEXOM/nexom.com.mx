@@ -71,25 +71,37 @@
     @media(max-width:680px){.benefit-item{grid-template-columns:48px 1fr}.benefit-icon{width:48px;height:48px;border-radius:14px}.benefit-icon svg{width:26px;height:26px}.chart-legend{gap:10px;font-size:.56rem}.chart-line{stroke-width:7}}
     @media(prefers-reduced-motion:reduce){.sparkline-line,.chart-line{stroke-dashoffset:0}.sparkline-area,.chart-area{opacity:.3;transform:none}.sparkline-mid,.sparkline-end,.chart-mid,.chart-end{opacity:1;transform:none}.sparkline-halo,.chart-halo{opacity:.25;transform:none}.chart-dot{opacity:1}.clock-hands,.benefit-shield svg,.benefit-shield:after,.shield-check,.outcomes .benefit-sparkline *,.performance-card.is-animated .chart-line,.performance-card.is-animated .chart-area,.performance-card.is-animated .chart-mid,.performance-card.is-animated .chart-end,.performance-card.is-animated .chart-halo{animation:none}.clock-hands,.benefit-shield svg{transform:none}.benefit-shield:after{opacity:0}.shield-check{opacity:1}}
     .nav a,.btn{font-weight:300}
-    /* Ampliación del mapa principal orientada a facilitar su lectura. */
-    .map-zoom-trigger{position:relative;display:block;width:fit-content;max-width:100%;margin-inline:auto;padding:0;border-radius:28px;background:transparent;color:#fff;cursor:zoom-in}
-    .map-zoom-trigger .hero-visual{width:auto;max-width:100%;max-height:413px;margin-inline:auto;transition:transform .35s cubic-bezier(.22,1,.36,1),box-shadow .35s ease}
-    .map-zoom-trigger:hover .hero-visual,.map-zoom-trigger:focus-visible .hero-visual{transform:scale(1.015);box-shadow:0 38px 90px rgba(0,0,0,.42),0 0 28px rgba(31,182,178,.12)}
-    .map-zoom-trigger:focus-visible{outline:3px solid var(--cyan2);outline-offset:5px}
-    .map-zoom-label{position:static;display:flex;width:max-content;max-width:100%;align-items:center;gap:8px;margin:10px 0 0 auto;padding:9px 13px;border:1px solid rgba(255,255,255,.24);border-radius:999px;background:rgba(7,20,41,.86);box-shadow:0 8px 24px rgba(0,0,0,.28);font-size:.72rem;line-height:1;backdrop-filter:blur(8px)}
-    .map-zoom-label svg{width:17px;height:17px}
-    .map-lightbox{width:calc(100vw - 24px);max-width:none;height:calc(100vh - 24px);max-height:none;margin:auto;padding:0;border:1px solid rgba(114,221,216,.3);border-radius:20px;background:#071429;color:#fff;overflow:hidden;box-shadow:0 30px 100px rgba(0,0,0,.65)}
-    .map-lightbox::backdrop{background:rgba(3,10,22,.86);backdrop-filter:blur(7px)}
-    .map-lightbox[open]{animation:map-reader-open .38s cubic-bezier(.22,1,.36,1)}
-    .map-lightbox-inner{position:relative;width:100%;height:100%;padding:66px 18px 18px;overflow:auto;overscroll-behavior:contain}
-    .map-lightbox-image{display:block;width:auto;height:auto;max-width:100%;max-height:calc(100vh - 108px);margin:auto;object-fit:contain;cursor:zoom-in;transition:transform .28s ease}
-    .map-lightbox-image.is-zoomed{width:1536px;max-width:none;max-height:none;cursor:zoom-out}
-    .map-lightbox-controls{position:fixed;z-index:2;top:26px;right:28px;display:flex;gap:9px}
-    .map-lightbox-control{min-height:38px;padding:8px 13px;border:1px solid rgba(255,255,255,.2);border-radius:10px;background:rgba(15,40,72,.95);color:#fff;cursor:pointer;font-size:.76rem;box-shadow:0 8px 24px rgba(0,0,0,.25)}
-    .map-lightbox-control:hover{background:var(--blue)}
-    @keyframes map-reader-open{from{opacity:0;transform:scale(.93)}to{opacity:1;transform:scale(1)}}
-    @media(max-width:680px){.map-zoom-label{right:9px;bottom:9px;padding:8px 10px}.map-lightbox-controls{top:21px;right:20px}.map-lightbox-inner{padding:62px 10px 10px}}
-    @media(prefers-reduced-motion:reduce){.map-zoom-trigger .hero-visual,.map-lightbox-image{transition:none}.map-zoom-trigger:hover .hero-visual,.map-zoom-trigger:focus-visible .hero-visual{transform:none}.map-lightbox[open]{animation:none}}
+    /* La infografía conserva las dimensiones máximas de la versión del 7 de agosto. */
+    .operation-map .hero-visual{width:auto;max-width:100%;max-height:413px;margin-inline:auto}
+    /* Hero adaptable para computadora, tableta y teléfono. */
+    .hero-grid,.hero-media,.operation-map{min-width:0}
+    .hero-media,.operation-map{width:100%}
+    .hero h1,.hero p,.hero-kicker span{overflow-wrap:anywhere}
+    .trust-band .trust-row{grid-template-columns:repeat(5,minmax(0,1fr))}
+    .trust-band .trust-row span{font-size:clamp(.74rem,1.05vw,1rem);font-weight:300}
+    @media(min-width:1001px){
+      .hero-grid{grid-template-columns:minmax(0,1.05fr) minmax(480px,.95fr);align-items:center}
+      .hero-media{max-width:620px;justify-self:end}
+    }
+    @media(min-width:681px) and (max-width:1000px){
+      .hero-grid{width:min(100%,780px);margin-inline:auto}
+      .hero-grid>div:first-child{text-align:center}
+      .hero-kicker{justify-content:center}
+      .hero p{margin-inline:auto}
+      .hero-media{max-width:620px;margin-inline:auto}
+      .hero-media .hero-actions{justify-content:center}
+    }
+    @media(max-width:680px){
+      .hero-grid{width:100%;margin-inline:auto}
+      .hero-kicker{display:flex;width:100%;border-radius:14px}
+      .hero-media{gap:14px}
+      .operation-map .hero-visual{width:100%;height:auto;max-height:none;border-radius:16px}
+      .hero-media .hero-actions{display:grid;grid-template-columns:1fr;width:100%;gap:9px}
+      .hero-media .hero-actions .btn{width:100%}
+      .trust-band .trust-row{display:grid!important;grid-template-columns:1fr!important;gap:0!important;overflow-x:visible!important}
+      .trust-band .trust-row span{width:100%;min-height:46px;padding:10px 8px!important;border-left:0!important;font-size:clamp(.72rem,3.5vw,.9rem)!important;line-height:1.3;white-space:nowrap!important}
+      .trust-band .trust-row span+span{border-top:1px solid var(--line)!important}
+    }
   </style>
 </head>
 <body id="top">
@@ -107,11 +119,10 @@
 <section class="hero" id="inicio">
   <div class="container hero-grid">
     <div class="reveal"><div class="hero-kicker"><i></i><span>Asistentes conversacionales, automatización y capacidades digitales</span></div><h1>Trabaja mejor con Inteligencia Artificial <span class="accent">aplicada a tu realidad.</span></h1><p><strong>Creamos asistentes conversacionales con IA, automatizamos procesos administrativos y ayudamos a tus equipos a incorporar la tecnología para aumentar su productividad y generar resultados reales.</strong><br><br><strong>Soluciones adaptadas a cada necesidad, implementadas por etapas y acompañadas hasta lograr una adopción efectiva.</strong></p><div class="hero-micro">Proyectos por etapas, indicadores definidos y transferencia de conocimiento.</div></div>
-    <div class="hero-media reveal"><figure class="operation-map"><button class="map-zoom-trigger" id="mapZoomTrigger" type="button" aria-haspopup="dialog" aria-controls="mapLightbox"><img class="hero-visual" src="images/imagen_hero.png" alt="Infografía de asistentes conversacionales, automatización administrativa y adopción tecnológica de NEXOM"><span class="map-zoom-label"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 5 5M8 11h6M11 8v6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>Ampliar diagrama</span></button></figure><div class="hero-actions"><a class="btn btn-primary" href="#contacto">Solicitar diagnóstico <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></a><a class="btn btn-outline" href="#metodologia">Conocer la metodología</a></div></div>
+    <div class="hero-media reveal"><figure class="operation-map"><img class="hero-visual" src="images/imagen_hero.png" alt="Infografía de asistentes conversacionales, automatización administrativa y adopción tecnológica de NEXOM"></figure><div class="hero-actions"><a class="btn btn-primary" href="#contacto">Solicitar diagnóstico <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></a><a class="btn btn-outline" href="#metodologia">Conocer la metodología</a></div></div>
   </div>
 </section>
-<dialog class="map-lightbox" id="mapLightbox" aria-label="Infografía ampliada de las soluciones de NEXOM"><div class="map-lightbox-inner"><div class="map-lightbox-controls"><button class="map-lightbox-control" id="mapOriginalSize" type="button">Ver tamaño original</button><button class="map-lightbox-control" id="mapLightboxClose" type="button" aria-label="Cerrar infografía ampliada">Cerrar ×</button></div><img class="map-lightbox-image" id="mapLightboxImage" src="images/imagen_hero.png" alt="Infografía ampliada de asistentes conversacionales, automatización administrativa y adopción tecnológica de NEXOM"></div></dialog>
-<section class="trust-band"><div class="container"><div class="trust-row" style="display: flex !important; flex-wrap: nowrap !important; justify-content: center !important; gap: 25px; overflow-x: auto; align-items: center;"><span style="font-size: 1.2rem !important; font-weight: 300; white-space: nowrap !important; text-align: center !important;">Diagnóstico</span><span style="font-size: 1.2rem !important; font-weight: 300; white-space: nowrap !important; text-align: center !important;">Asistentes conversacionales IA</span><span style="font-size: 1.2rem !important; font-weight: 300; white-space: nowrap !important; text-align: center !important;">Automatización procesos administrativos</span><span style="font-size: 1.2rem !important; font-weight: 300; white-space: nowrap !important; text-align: center !important;">Adopción tecnológica</span><span style="font-size: 1.2rem !important; font-weight: 300; white-space: nowrap !important; text-align: center !important;">NEXOM Knowledge Hub</span></div></div></section>
+<section class="trust-band"><div class="container"><div class="trust-row"><span>Diagnóstico</span><span>Asistentes conversacionales IA</span><span>Automatización procesos administrativos</span><span>Adopción tecnológica</span><span>NEXOM Knowledge Hub</span></div></div></section>
 <section class="problems"><div class="container"><div class="section-head reveal"><span class="eyebrow">El reto</span><h2 class="section-title">La tecnología no resuelve un proceso que no ha sido comprendido.</h2><p class="section-text">Muchas organizaciones incorporan herramientas sin definir primero qué problema buscan resolver, cómo medirán el resultado o quién operará la solución.</p></div><div class="cards-6">
   <article class="problem reveal"><div class="icon-box"><svg viewBox="0 0 24 24" fill="none"><path d="M4 18V8h16v10H4Z" stroke="currentColor" stroke-width="1.8"/><path d="M7 12h10M7 15h6" stroke="currentColor" stroke-width="1.8"/></svg></div><h3>Procesos manuales</h3><p>Actividades repetitivas que consumen tiempo y dependen demasiado de las personas.</p></article>
   <article class="problem reveal"><div class="icon-box"><svg viewBox="0 0 24 24" fill="none"><path d="M5 4h10l4 4v12H5V4Z" stroke="currentColor" stroke-width="1.8"/><path d="M9 12h6M9 16h6" stroke="currentColor" stroke-width="1.8"/></svg></div><h3>Información dispersa</h3><p>Conocimiento distribuido entre archivos, correos, hojas de cálculo y conversaciones.</p></article>
@@ -210,14 +221,6 @@ const benefitsSection=document.getElementById('beneficios');
 const performanceCard=document.getElementById('benefitsPerformance');
 const performanceCounters=performanceCard?.querySelectorAll('.performance-counter')||[];
 const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;
-const mapZoomTrigger=document.getElementById('mapZoomTrigger'),mapLightbox=document.getElementById('mapLightbox'),mapLightboxImage=document.getElementById('mapLightboxImage'),mapOriginalSize=document.getElementById('mapOriginalSize');
-function toggleMapOriginalSize(){const zoomed=mapLightboxImage.classList.toggle('is-zoomed');mapOriginalSize.textContent=zoomed?'Ajustar a pantalla':'Ver tamaño original'}
-mapZoomTrigger?.addEventListener('click',()=>mapLightbox.showModal());
-document.getElementById('mapLightboxClose')?.addEventListener('click',()=>mapLightbox.close());
-mapOriginalSize?.addEventListener('click',toggleMapOriginalSize);
-mapLightboxImage?.addEventListener('click',toggleMapOriginalSize);
-mapLightbox?.addEventListener('click',event=>{if(event.target===mapLightbox)mapLightbox.close()});
-mapLightbox?.addEventListener('close',()=>{mapLightboxImage.classList.remove('is-zoomed');mapOriginalSize.textContent='Ver tamaño original';mapZoomTrigger.focus()});
 function setPerformanceValue(el,value){el.textContent=`${el.dataset.prefix||''}${Math.round(value)}${el.dataset.suffix||''}`}
 function animatePerformanceCounter(el){
   const start=Number(el.dataset.start),target=Number(el.dataset.target),duration=1800,startTime=performance.now();
