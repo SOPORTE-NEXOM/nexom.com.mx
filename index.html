@@ -40,7 +40,7 @@
     .solution:hover,.solution:focus-within{background:linear-gradient(145deg,#0e284b,#133d6b);color:#fff;border-color:transparent}.solution:hover p,.solution:hover ul,.solution:focus-within p,.solution:focus-within ul{color:rgba(255,255,255,.68)}.solution:hover .tag,.solution:focus-within .tag{background:rgba(114,221,216,.13);color:#aaf0ec}.solution:hover a,.solution:focus-within a{color:#8fe6e1}.sector{transition:.25s ease}.sector:hover{transform:translateY(-6px);border-color:rgba(31,182,178,.45);box-shadow:var(--shadow)}
     @media(max-width:1000px){.hero{min-height:auto}.hero-grid,.benefits-layout{grid-template-columns:1fr}.operation-map{max-width:720px}.performance-card{min-height:460px}}
     @media(max-width:680px){.hero{padding:100px 0 58px}.hero h1{font-size:clamp(2.3rem,10.8vw,2.75rem)}.hero-kicker{font-size:.67rem;align-items:flex-start}.hero-kicker i{flex:0 0 auto;margin-top:4px}.operation-map{display:grid}.hero p{font-size:.98rem}.hero-micro{margin-top:18px}.benefits-layout{gap:28px}.performance-card{min-height:430px;padding:24px}.performance-stats{grid-template-columns:1fr}.performance-stat{padding:11px 14px}.performance-stat small,.performance-stat strong{display:inline;font-size:.78rem}.performance-stat strong{margin-left:8px}.performance-chart{height:170px;inset:auto 18px 30px}.performance-status{right:14px;bottom:18px}.solution:hover{transform:none}}
-    .hero-media{display:grid;gap:16px;min-width:0}.hero-media .hero-actions{justify-content:center}.hero-media .operation-map{width:100%}
+    .hero-media{display:grid;gap:16px;min-width:0}.hero-media .hero-actions{justify-content:center}.hero-media .operation-map{width:100%;overflow:hidden;border-radius:28px}.hero-visual{cursor:zoom-in;transition:transform .35s ease,box-shadow .35s ease;transform-origin:center center}.hero-image-modal{position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(0,0,0,.85);backdrop-filter:blur(4px)}.hero-image-modal.open{display:grid}.hero-image-modal img{width:auto;height:auto;max-width:calc(100vw - 40px);max-height:calc(100vh - 40px);object-fit:contain;border-radius:24px;box-shadow:0 40px 90px rgba(0,0,0,.6);background:#080c15}.hero-image-modal .hero-image-close{position:absolute;top:18px;right:18px;width:42px;height:42px;display:grid;place-items:center;border-radius:50%;border:1px solid rgba(255,255,255,.25);background:rgba(0,0,0,.45);color:#fff;font-size:1.1rem;cursor:pointer;transition:.2s ease}.hero-image-modal .hero-image-close:hover{transform:translateY(-2px);background:rgba(255,255,255,.12)}.operation-map .hero-visual{transition:transform .35s ease,box-shadow .35s ease}@media(hover:hover) and (pointer:fine){.operation-map:hover .hero-visual{transform:scale(1.04);box-shadow:0 38px 90px rgba(0,0,0,.4)}}@media(prefers-reduced-motion:reduce){.operation-map .hero-visual{transition:none}.operation-map:hover .hero-visual{transform:none}}
     @media(max-width:680px){.hero-media .operation-map{display:grid}.hero-media .hero-actions{justify-content:flex-start}}
     /* Encuadre inicial: logo amplio y barra de capacidades completa dentro del viewport. */
     .header{height:96px}.brand-logo{width:92px;height:92px}.header.scrolled{height:72px}.header.scrolled .brand-logo{width:68px;height:68px}
@@ -120,7 +120,7 @@
 <section class="hero" id="inicio">
   <div class="container hero-grid">
     <div class="reveal"><div class="hero-kicker"><i></i><span>Asistentes conversacionales, automatización y capacidades digitales</span></div><h1>Trabaja mejor con Inteligencia Artificial <span class="accent">aplicada a tu realidad.</span></h1><p><strong>Creamos asistentes conversacionales con IA, automatizamos procesos administrativos y ayudamos a tus equipos a incorporar la tecnología para aumentar su productividad y generar resultados reales.</strong><br><br><strong>Soluciones adaptadas a cada necesidad, implementadas por etapas y acompañadas hasta lograr una adopción efectiva.</strong></p><div class="hero-micro">Proyectos por etapas, indicadores definidos y transferencia de conocimiento.</div></div>
-    <div class="hero-media reveal"><figure class="operation-map"><img class="hero-visual" src="images/imagen_hero.png" alt="Infografía de asistentes conversacionales, automatización administrativa y adopción tecnológica de NEXOM"></figure><div class="hero-actions"><a class="btn btn-primary" href="#contacto">Solicitar diagnóstico <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></a><a class="btn btn-outline" href="#metodologia">Conocer la metodología</a></div></div>
+    <div class="hero-media reveal"><figure class="operation-map"><div class="hero-background"><img class="hero-visual" src="images/imagen_hero.png" alt="Infografía de asistentes conversacionales, automatización administrativa y adopción tecnológica de NEXOM"></div></figure><div class="hero-actions"><a class="btn btn-primary" href="#contacto">Solicitar diagnóstico <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></a><a class="btn btn-outline" href="#metodologia">Conocer la metodología</a></div></div>
   </div>
 </section>
 <section class="trust-band"><div class="container"><div class="trust-row"><span>Diagnóstico</span><span>Asistentes conversacionales IA</span><span>Automatización procesos administrativos</span><span>Adopción tecnológica</span><span>NEXOM Knowledge Hub</span></div></div></section>
@@ -172,9 +172,9 @@
   <article class="principle reveal"><strong>Fuentes autorizadas</strong><p>La información utilizada ha sido validada previamente.</p></article><article class="principle reveal"><strong>Alcance delimitado</strong><p>Se define qué puede y qué no puede realizar cada solución.</p></article><article class="principle reveal"><strong>Supervisión humana</strong><p>Los casos críticos pueden transferirse a responsables designados.</p></article><article class="principle reveal"><strong>Protección de información</strong><p>Se revisan permisos, accesos y tratamiento de datos.</p></article><article class="principle reveal"><strong>Documentación</strong><p>La solución se entrega con documentación técnica y operativa.</p></article><article class="principle reveal"><strong>Medición</strong><p>Los indicadores se establecen antes y después de implementar.</p></article><article class="principle reveal"><strong>Transferencia</strong><p>El equipo recibe capacitación para operar y mejorar la solución.</p></article>
 </div></div></section>
 <section class="resources" id="recursos"><div class="container"><div class="section-head reveal"><span class="eyebrow">Knowledge Hub</span><h2 class="section-title">Conocimiento útil según el objetivo de cada visitante.</h2><p class="section-text">Elige la ruta que mejor representa tu contexto. Cada espacio reúne criterios y herramientas prácticas para avanzar desde necesidades distintas.</p></div><div class="article-grid">
-  <article class="article reveal"><span class="article-meta">Para empresas · Eficiencia operativa</span><h3>Convierte necesidades del negocio en oportunidades de mejora</h3><p>Contenido para líderes, dueños y responsables de operación que buscan priorizar procesos y adoptar tecnología con resultados medibles.</p><ul class="article-focus"><li>Detectar procesos automatizables</li><li>Priorizar impacto, viabilidad y riesgo</li><li>Definir una ruta de implementación</li></ul><a href="pages/guia-procesos-automatizables.html">Explorar recursos para empresas →</a></article>
-  <article class="article reveal"><span class="article-meta">Para profesionistas · Aplicación de IA</span><h3>Fortalece tu práctica profesional con inteligencia artificial</h3><p>Recursos para especialistas, consultores y profesionistas que desean integrar IA a su trabajo con criterio, productividad y control.</p><ul class="article-focus"><li>Distinguir chatbot, asistente y agente</li><li>Elegir herramientas según la tarea</li><li>Desarrollar capacidades aplicables</li></ul><a href="pages/chatbot-asistente-agente.html">Explorar recursos para profesionistas →</a></article>
-  <article class="article reveal"><span class="article-meta">Desarrollo de audiencia y talento</span><h3>Desarrolla audiencias y talento con una estrategia medible</h3><p>Contenido para responsables de formación, comunicación, educación y comunidades que buscan convertir conocimiento en participación y desarrollo.</p><ul class="article-focus"><li>Definir objetivos e indicadores</li><li>Medir alcance, aprendizaje y adopción</li><li>Diseñar experiencias de mejora continua</li></ul><a href="pages/plantilla-indicadores.html">Explorar recursos de audiencia y talento →</a></article>
+  <article class="article reveal"><span class="article-meta">Para empresas · Eficiencia operativa</span><h3>Convierte necesidades del negocio en oportunidades de mejora</h3><p>Contenido para líderes, dueños y responsables de operación que buscan priorizar procesos y adoptar tecnología con resultados medibles.</p><ul class="article-focus"><li>Detectar procesos automatizables</li><li>Priorizar impacto, viabilidad y riesgo</li><li>Definir una ruta de implementación</li></ul><a href="pages/recursos-empresas.html">Explorar recursos para empresas →</a></article>
+  <article class="article reveal"><span class="article-meta">Para profesionistas · Aplicación de IA</span><h3>Fortalece tu práctica profesional con inteligencia artificial</h3><p>Recursos para especialistas, consultores y profesionistas que desean integrar IA a su trabajo con criterio, productividad y control.</p><ul class="article-focus"><li>Distinguir chatbot, asistente y agente</li><li>Elegir herramientas según la tarea</li><li>Desarrollar capacidades aplicables</li></ul><a href="pages/recursos-profesionistas.html">Explorar recursos para profesionistas →</a></article>
+  <article class="article reveal"><span class="article-meta">Desarrollo de audiencia y talento</span><h3>Desarrolla audiencias y talento con una estrategia medible</h3><p>Contenido para responsables de formación, comunicación, educación y comunidades que buscan convertir conocimiento en participación y desarrollo.</p><ul class="article-focus"><li>Definir objetivos e indicadores</li><li>Medir alcance, aprendizaje y adopción</li><li>Diseñar experiencias de mejora continua</li></ul><a href="pages/recursos-audiencia-talento.html">Explorar recursos de audiencia y talento →</a></article>
 </div></div></section>
 <section class="contact" id="contacto"><div class="container"><div class="contact-wrap reveal"><aside class="contact-info"><span class="eyebrow">Contacto y diagnóstico</span><h2>Conversemos sobre el proceso que deseas mejorar.</h2><p>La información nos ayudará a preparar una primera conversación más útil y enfocada.</p>
 
@@ -234,6 +234,35 @@ const contactForm=document.getElementById('contactForm'),formMessage=document.ge
 contactForm.addEventListener('submit',()=>{const submitButton=contactForm.querySelector('button[type="submit"]');submitButton.disabled=true;submitButton.textContent='Enviando solicitud…';formMessage.textContent='Enviando tus datos de forma segura…'});
 if(new URLSearchParams(location.search).get('enviado')==='1'){formMessage.textContent='Gracias. Tu solicitud fue enviada correctamente a nuestro equipo.';history.replaceState({},'',`${location.pathname}#contacto`)}
 document.getElementById('year').textContent=new Date().getFullYear();
+
+const heroImage = document.querySelector('.hero-visual');
+if (heroImage) {
+  const heroModal = document.createElement('div');
+  heroModal.className = 'hero-image-modal';
+  heroModal.innerHTML = `<button type="button" class="hero-image-close" aria-label="Cerrar imagen ampliada">×</button><img src="${heroImage.src}" alt="${heroImage.alt}">`;
+  document.body.appendChild(heroModal);
+
+  const closeButton = heroModal.querySelector('.hero-image-close');
+  const modalImage = heroModal.querySelector('img');
+  function openModal() {
+    modalImage.src = heroImage.src;
+    modalImage.alt = heroImage.alt;
+    heroModal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal() {
+    heroModal.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  heroImage.addEventListener('click', openModal);
+  closeButton.addEventListener('click', closeModal);
+  heroModal.addEventListener('click', (event) => {
+    if (event.target === heroModal) {
+      closeModal();
+    }
+  });
+}
 </script>
 <script src="js/cookie-consent.js"></script>
 <a class="back-to-top" href="#top" aria-label="Volver al inicio de la página" title="Volver arriba"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 15 6-6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>

@@ -599,6 +599,18 @@ body.dark-theme .theme-toggle .moon-icon {
   object-position: center;
   transform: scale(1.04);
   animation: heroZoom 18s ease-in-out infinite alternate;
+  transition: transform 0.35s ease;
+  cursor: zoom-in;
+}
+
+.hero-background.expanded img {
+  transform: scale(1.12);
+  animation: none;
+  cursor: zoom-out;
+}
+
+.hero-background.expanded {
+  cursor: zoom-out;
 }
 
 .hero-glow {
