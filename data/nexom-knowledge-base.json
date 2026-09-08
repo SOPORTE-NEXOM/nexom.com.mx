@@ -9,7 +9,7 @@
     "phone": {
       "value": "477 627 9522",
       "status": "verified",
-      "label": "Teléfono de contacto",
+      "label": "Número de oficina",
       "isWhatsapp": false,
       "whatsappConfirmed": false
     },
