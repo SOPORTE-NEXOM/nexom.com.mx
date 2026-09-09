@@ -10,8 +10,8 @@
       "value": "477 627 9522",
       "status": "verified",
       "label": "Número de oficina",
-      "isWhatsapp": false,
-      "whatsappConfirmed": false
+      "isWhatsapp": true,
+      "whatsappConfirmed": true
     },
     "email": {
       "value": "alejandro.montes@nexom.com.mx",
@@ -48,8 +48,8 @@
       "status": "not_published"
     },
     "whatsapp": {
-      "value": null,
-      "status": "not_published"
+      "value": "477 627 9522",
+      "status": "verified"
     },
     "businessHours": {
       "value": null,
